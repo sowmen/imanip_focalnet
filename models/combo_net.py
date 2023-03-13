@@ -58,7 +58,7 @@ class FocalWin(nn.Module):
         self.decoder.load_state_dict(self.load_lawin_dict(), strict=False)
     
     def load_focalnet_dict(self):
-        state_dict = torch.load('weights/focalnet_small_srf_upernet_160k.pth')['state_dict']
+        state_dict = torch.load('/content/drive/MyDrive/imanip/weights/focalnet_small_srf_upernet_160k.pth')['state_dict']
         encoder_dict = {}
         for k, v in state_dict.items():
             if k.startswith('backbone'):
@@ -67,7 +67,7 @@ class FocalWin(nn.Module):
         return encoder_dict
     
     def load_lawin_dict(self):
-        lawin_state_dict = torch.load('weights/lawin_B2_ade20k.pth')['state_dict']
+        lawin_state_dict = torch.load('/content/drive/MyDrive/imanip/weights/lawin_B2_ade20k.pth')['state_dict']
         decoder_dict = {}
         for k, v in lawin_state_dict.items():
             if k.startswith('decode'):

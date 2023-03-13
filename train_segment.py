@@ -29,8 +29,8 @@ CKPT_DIR = "checkpoint"
 device = 'cuda'
 config_defaults = {
     "epochs": 40,
-    "train_batch_size": 14,
-    "valid_batch_size": 32,
+    "train_batch_size": 8,
+    "valid_batch_size": 14,
     "optimizer": "adam",
     "learning_rate": 0.0001,
     "weight_decay": 0.0005,
